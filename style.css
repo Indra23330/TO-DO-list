@@ -1,0 +1,121 @@
+/* Reset basic defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181616;
+    color: bisque;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Outer container styling */
+.outerbox {
+    background-color: #373333;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+.todolist h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f0e6d2;
+}
+
+/* Input and button row */
+.addtask {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#addTask {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #404545;
+    color: rgb(211, 165, 104);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#addTask:focus {
+    background-color: #4f5555;
+}
+
+#tasksubmit {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #4c8852;
+    color: #d4bb9b;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#tasksubmit:hover {
+    background-color: #3c7442;
+}
+
+/* Task list */
+#todolist {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual task */
+#todolist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2a2a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#todolist li:hover {
+    transform: scale(1.02);
+    background-color: #3d3939;
+}
+
+/* Task text */
+#todolist li span {
+    flex-grow: 1;
+    color: #e7cba3;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+/* Delete button */
+#todolist li button {
+    margin-left: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #9e4444;
+    color: #f0e6d2;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#todolist li button:hover {
+    background-color: #b85656;
+}
